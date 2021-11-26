@@ -15,4 +15,14 @@ class Post extends Model
         'contents',
     ];
 
+    public function comments()
+    {
+        return $this->hasMany(Comment::class);
+    }
+
+    // public function user()
+    // {
+    //     return $this->hasMany(user::class);
+    // }
+
 }
