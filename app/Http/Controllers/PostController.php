@@ -10,9 +10,10 @@ class PostController extends Controller
     //
     public function index()
     {
-        $posts = Post::all();
+        $posts = Post::find(1);
         $comments = Post::find(1)->comments;
-        return view('posts',['posts' => $posts,'comments'=>$comments]);
+        return view('pp',['posts' => $posts,'comments'=>$comments
+        ]);
     }
 
     // public function showpost()

@@ -22,4 +22,9 @@ Route::get('/', function () {
 
 Route::get('/posts', [PostController::class, 'index']);
 
+Route::get('/users', [App\Http\Controllers\UserController::class, 'index']);
+
 #Route::get( url: '/home', [App\Http\Controllers\HomeController::Class, 'index'])->name( name; 'home');
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
